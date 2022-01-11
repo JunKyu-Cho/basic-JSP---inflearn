@@ -1,6 +1,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page errorPage="errorPage.jsp" %>    
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,8 +16,11 @@
 		
 		String imgDir;
 		String testServerIP;
+		
+		String str;
 		%>
 		
+		<!--  config °´Ã¼ -->
 		<%
 		adminId = config.getInitParameter("adminId");
 		adminPw = config.getInitParameter("adminPw");
@@ -39,6 +43,10 @@
 		application.setAttribute("connectedUser", "mainUser");		
 		%>
 		
+		<!--  exception °´Ã¼ -->
+		<%
+		out.print(str.toString());
+		%>
 		
 	</body>
 </html>
