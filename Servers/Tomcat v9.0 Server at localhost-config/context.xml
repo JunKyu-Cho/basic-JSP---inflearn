@@ -26,4 +26,15 @@
     <!--
     <Manager pathname="" />
     -->
+    
+    <Resource
+    	auth="container"
+    	driverClassName="oracle.jdbc.driver.OracleDriver"
+    	url="jdbc:oracle:thin:@192.168.2.113:1521:KBPMS"
+    	username="KBPMS"
+    	password="KBPMS"
+    	name="jdbc/Oracle11g"
+    	type="javax.sql.DataSource"
+    	maxActive="4"
+    	maxWait="10000" />
 </Context>

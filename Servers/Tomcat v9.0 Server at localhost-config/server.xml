@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8090" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8090" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Project01" path="/Project01" reloadable="true" source="org.eclipse.jst.jee.server:Project01"/><Context docBase="Project02" path="/Project02" reloadable="true" source="org.eclipse.jst.jee.server:Project02"/></Host>
+      <Context docBase="Project01" path="/Project01" reloadable="true" source="org.eclipse.jst.jee.server:Project01"/><Context docBase="Project02" path="/Project02" reloadable="true" source="org.eclipse.jst.jee.server:Project02"/><Context docBase="Project03" path="/Project03" reloadable="true" source="org.eclipse.jst.jee.server:Project03"/><Context docBase="Project04_Cookie" path="/Project04_Cookie" reloadable="true" source="org.eclipse.jst.jee.server:Project04_Cookie"/><Context docBase="Project05_Session" path="/Project05_Session" reloadable="true" source="org.eclipse.jst.jee.server:Project05_Session"/><Context docBase="Project06_Encoding" path="/Project06_Encoding" reloadable="true" source="org.eclipse.jst.jee.server:Project06_Encoding"/><Context docBase="Project07_JDBC" path="/Project07_JDBC" reloadable="true" source="org.eclipse.jst.jee.server:Project07_JDBC"/><Context docBase="Project08_DAO&amp;DTO" path="/Project08_DAO_DTO" reloadable="true" source="org.eclipse.jst.jee.server:Project08_DAO&amp;DTO"/></Host>
     </Engine>
   </Service>
 </Server>

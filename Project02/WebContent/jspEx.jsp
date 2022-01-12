@@ -11,31 +11,36 @@
 	
 	<body>
 		<%!
-		String adminId;
+		String adminId, adminId2;
 		String adminPw;
 		
-		String imgDir;
+		String imgDir, imgDir2;
 		String testServerIP;
 		
 		String str;
 		%>
 		
-		<!--  config 按眉 -->
+		<!--  config 按眉 => <init-param> -->
 		<%
 		adminId = config.getInitParameter("adminId");
+		adminId2 = getServletConfig().getInitParameter("adminId");
 		adminPw = config.getInitParameter("adminPw");
 		%>
 		
 		<p>adminId : <%= adminId %></p>
+		<p>adminId2 : <%= adminId2 %></p>
 		<p>adminPw : <%= adminPw %></p>
 		
-		<!-- application 按眉 -->
+		<!-- application 按眉 => <context-param> -->
 		<%
 		imgDir = application.getInitParameter("imgDir");
+		imgDir2 = getServletContext().getInitParameter("imgDir");
+		
 		testServerIP = application.getInitParameter("testServerIP");
 		%>
 		
 		<p>imgDir : <%= imgDir %></p>
+		<p>imgDir2 : <%= imgDir2 %></p>
 		<p>testServerIP : <%= testServerIP %></p>
 		
 		<%
@@ -45,7 +50,7 @@
 		
 		<!--  exception 按眉 -->
 		<%
-		out.print(str.toString());
+		// out.print(str.toString());
 		%>
 		
 	</body>
